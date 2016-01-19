@@ -11,7 +11,7 @@ public class Validator {
      * @param applicationName name of the applicationName
      * @return applicationName name valid or invalid
      */
-    public boolean validateApplicationName(String applicationName) {
+    public static boolean validateApplicationName(String applicationName) {
         String specialCharPattern = ".*\\W";
         Boolean isValid;
         boolean isInvalidChar = applicationName.matches(specialCharPattern);

@@ -56,7 +56,7 @@ var log=new Log();
 				response.message = message;
 				response.result = 0;
                 var appTypeDisplayName = modManager.getApplicationTypeBean(applicationType).getDisplayName();
-				var isValid = modManager.isApplicationNameValid(applicationKey);
+				var isValid = mod.isApplicationNameValid(applicationName);
 				if (!isValid) {
 					message = "Application name ".concat(applicationName).concat(" is not valid!");
 					response.message = message;
