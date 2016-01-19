@@ -228,6 +228,9 @@ jagg.module("application", {
     },
     getEsbArtifacts:function () {
         return jagg.require(jagg.getModulesDir() + "application/get/list.jag").getEsbArtifacts.apply(this, arguments);
+    },
+    isApplicationNameValid: function () {
+        return jagg.require(jagg.getModuleDir() + "application/add/add.jag").isApplicationNameValid.apply(this, arguments);
     }
 });
 %>

@@ -56,6 +56,13 @@ var log=new Log();
 				response.message = message;
 				response.result = 0;
                 var appTypeDisplayName = modManager.getApplicationTypeBean(applicationType).getDisplayName();
+				var isValid = modManager.isApplicationNameValid(applicationKey);
+				if (!isValid) {
+					message = "Application name ".concat(applicationName).concat(" is not valid!");
+					response.message = message;
+					response.result = 0;
+					print(response);
+				}
 
 				if (appTypeDisplayName) {
 					// adds to session in 'Pending state', until the application

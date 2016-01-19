@@ -326,4 +326,10 @@ function getExtenstionByAppType(applicationType){
     return modManager.getApplicationTypeBean(applicationType).getExtension();
 };
 
+function isApplicationNameValid(applicationName) {
+    var validator = Packages.org.wso2.carbon.appfactory.common.util.Validator;
+    var isValid = validator.validateApplicationName(applicationName);
+    return isValid;
+}
+
 %>
